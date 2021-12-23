@@ -1,3 +1,11 @@
+/*
+  File-based routing gives the user an illusion of having multiple page requests. 
+  Even the URL is being updated on changing the page.
+  Actually, you have one SPA with multiple components, where you can also preserve the state.
+  Nested (foldername = pathname) and dynamc ([]) routes are also possible.
+  Also quite intuitive folder structure for developers.
+*/
+
 import React, { ReactNode } from "react";
 import Link from "next/link";
 import Head from "next/head";
