@@ -10,8 +10,8 @@ type Props = {
 };
 
 const WithServerSideProps = ({ props }: Props) => (
-  <Layout title="About">
-    <h1>About</h1>
+  <Layout title="Election LiveTicker">
+    <h1>Election LiveTicker</h1>
     <p>
       I use <code>getServerSideProps()</code> and I am rendered on request. I
       might not perform well, but I am always up-to-date. :)
