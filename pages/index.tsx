@@ -1,7 +1,7 @@
 /*
 Example for including static props: 
 WithStaticProps waits for getStaticProps to pass the props.
-Incremental Static Generation (revalidate): NextJS waits 25 seconds to rerender page on server
+Incremental Static Generation (revalidate): NextJS waits 25 seconds to re-render page on server
 */
 
 import { GetStaticProps } from "next";
@@ -20,7 +20,11 @@ const WithStaticProps = ({ items }: Props) => (
   <Layout title="News Site Overview | Stage">
     <h1>Stage: News Site Overview</h1>
     <p>
-      Fetching data with <code>getStaticProps()</code>.
+      Incremental Static Generation with revalidate. When fetching data with{" "}
+      <code>getStaticProps()</code>, NextJS pre-renders the page into HTML on
+      the server ahead of each request, such as at build time. That means a good
+      performance and revalidate takes care that the page will be re-rendered
+      evey x seconds.
     </p>
     <Stage items={items} />
   </Layout>

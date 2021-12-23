@@ -4,3 +4,10 @@ export type Article = {
   image: string;
   text: string;
 };
+
+export type Party = {
+  id: number;
+  name: string;
+  votes: number;
+  percentage: number;
+};
