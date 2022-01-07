@@ -1,10 +1,10 @@
 //import StageItem from "./StageItem";
-import { Party } from "../interfaces";
+import { PartyType } from "../interfaces";
 import ListItem from "./ListItem";
 import styles from "./Stage.module.css";
 
 type Props = {
-  props: Party[];
+  props: PartyType[];
 };
 
 const ElectionResults = ({ props }: Props) => (

@@ -4,13 +4,13 @@
 
 import { GetStaticProps } from "next";
 import Link from "next/link";
-import { Article } from "../../interfaces";
+import { ArticleType } from "../../interfaces";
 import { dummyArticleData } from "../../utils/dummy-data";
 import Layout from "../../components/Layout";
 import List from "../../components/List";
 
 type Props = {
-  items: Article[];
+  items: ArticleType[];
 };
 
 const WithStaticProps = ({ items }: Props) => (
@@ -30,7 +30,7 @@ const WithStaticProps = ({ items }: Props) => (
 );
 
 export const getStaticProps: GetStaticProps = async () => {
-  const items: Article[] = dummyArticleData;
+  const items: ArticleType[] = dummyArticleData;
   return { props: { items } };
 };
 

@@ -12,10 +12,10 @@ import styles from "./Image.module.css";
 
 import Link from "next/link";
 
-import { Article } from "../interfaces";
+import { ArticleType } from "../interfaces";
 
 type Props = {
-  data: Article;
+  data: ArticleType;
 };
 
 const StageItem = ({ data }: Props) => (

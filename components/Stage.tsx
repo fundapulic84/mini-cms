@@ -1,9 +1,9 @@
 import StageItem from "./StageItem";
-import { Article } from "../interfaces";
+import { ArticleType } from "../interfaces";
 import styles from "./Stage.module.css";
 
 type Props = {
-  items: Article[];
+  items: ArticleType[];
 };
 
 const Stage = ({ items }: Props) => (

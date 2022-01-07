@@ -1,4 +1,4 @@
-import { Article } from "../interfaces";
+import { ArticleType } from "../interfaces";
 import Image from "next/image";
 
 /* 
@@ -19,7 +19,7 @@ import styles from "./Image.module.css";
 const Comments = dynamic(() => import("./Comments"));
 
 type ArticlePageProps = {
-  item: Article;
+  item: ArticleType;
 };
 
 function ArticlePage({ item: article }: ArticlePageProps) {

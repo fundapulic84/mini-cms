@@ -1,6 +1,6 @@
-import { Party } from "../interfaces";
+import { PartyType } from "../interfaces";
 
-export const dummyElectionData: Party[] = [
+export const dummyElectionData: PartyType[] = [
   {
     id: 1,
     name: "RED",

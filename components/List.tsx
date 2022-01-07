@@ -1,8 +1,8 @@
 import ListItem from "./ListItem";
-import { Article } from "../interfaces";
+import { ArticleType } from "../interfaces";
 
 type Props = {
-  items: Article[];
+  items: ArticleType[];
 };
 
 const List = ({ items }: Props) => (

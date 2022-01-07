@@ -1,12 +1,12 @@
 import { GetServerSideProps } from "next";
 import Link from "next/link";
 import Layout from "../components/Layout";
-import { Party } from "../interfaces";
+import { PartyType } from "../interfaces";
 import { dummyElectionData } from "../utils/election-data";
 import ElectionResults from "../components/ElectionResults";
 
 type Props = {
-  props: Party[];
+  props: PartyType[];
 };
 
 const WithServerSideProps = ({ props }: Props) => (
@@ -26,7 +26,7 @@ const WithServerSideProps = ({ props }: Props) => (
 );
 
 export const getServerSideProps: GetServerSideProps = async () => {
-  const props: Party[] = dummyElectionData;
+  const props: PartyType[] = dummyElectionData;
   return {
     props: { props },
   };

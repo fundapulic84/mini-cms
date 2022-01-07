@@ -1,6 +1,6 @@
-import { Article } from "../interfaces";
+import { ArticleType } from "../interfaces";
 
-export const dummyArticleData: Article[] = [
+export const dummyArticleData: ArticleType[] = [
   {
     id: 1,
     title: "News",

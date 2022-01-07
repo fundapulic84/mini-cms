@@ -1,12 +1,12 @@
 import { GetStaticProps, GetStaticPaths } from "next";
 
-import { Article } from "../../interfaces";
+import { ArticleType } from "../../interfaces";
 import { dummyArticleData } from "../../utils/dummy-data";
 import Layout from "../../components/Layout";
 import ArticlePage from "../../components/ArticlePage";
 
 type Props = {
-  item?: Article;
+  item?: ArticleType;
   errors?: string;
 };
 
