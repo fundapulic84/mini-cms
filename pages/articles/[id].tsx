@@ -3,14 +3,14 @@ import { GetStaticProps, GetStaticPaths } from "next";
 import { ArticleType } from "../../interfaces";
 import { dummyArticleData } from "../../utils/dummy-data";
 import Layout from "../../components/Layout";
-import ArticlePage from "../../components/ArticlePage";
+import Article from "../../components/Article";
 
 type Props = {
   item?: ArticleType;
   errors?: string;
 };
 
-const StaticPropsArticlePage = ({ item, errors }: Props) => {
+const StaticPropsArticle = ({ item, errors }: Props) => {
   if (errors) {
     return (
       <Layout title="Error">
@@ -23,12 +23,12 @@ const StaticPropsArticlePage = ({ item, errors }: Props) => {
 
   return (
     <Layout title={`${item ? item.title : "News Page"} | Article`}>
-      {item && <ArticlePage item={item} />}
+      {item && <Article item={item} />}
     </Layout>
   );
 };
 
-export default StaticPropsArticlePage;
+export default StaticPropsArticle;
 
 export const getStaticPaths: GetStaticPaths = async () => {
   /*
@@ -55,7 +55,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     const id = params?.id;
     const item = dummyArticleData.find((data) => data.id === Number(id));
     /*
-      By returning { props: item }, the StaticPropsArticlePage component
+      By returning { props: item }, the StaticPropsArticle component
       will receive `item` as a prop at build time
     */
     return { props: { item } };

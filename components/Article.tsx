@@ -18,11 +18,11 @@ import styles from "./Image.module.css";
 
 const Comments = dynamic(() => import("./Comments"));
 
-type ArticlePageProps = {
+type ArticleProps = {
   item: ArticleType;
 };
 
-function ArticlePage({ item: article }: ArticlePageProps) {
+function Article({ item: article }: ArticleProps) {
   /* 
   react-cool-inview uses the intersection observer technique 
   so that you can tell the comments wrapper to observe an 'in view' event
@@ -111,4 +111,4 @@ function ArticlePage({ item: article }: ArticlePageProps) {
   );
 }
 
-export default ArticlePage;
+export default Article;
