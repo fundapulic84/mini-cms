@@ -4,7 +4,7 @@ import { dummyArticleData } from "../../../utils/dummy-data";
 const handler = (_req: NextApiRequest, res: NextApiResponse) => {
   try {
     if (!Array.isArray(dummyArticleData)) {
-      throw new Error("Cannot find user data");
+      throw new Error("Cannot find data");
     }
 
     res.status(200).json(dummyArticleData);

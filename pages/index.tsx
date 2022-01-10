@@ -24,7 +24,7 @@ const WithStaticProps = ({ items }: Props) => (
       <code>getStaticProps()</code>, NextJS pre-renders the page into HTML on
       the server ahead of each request, such as at build time. That means a good
       performance and revalidate takes care that the page will be re-rendered
-      evey x seconds.
+      every x seconds.
     </p>
     <Stage items={items} />
   </Layout>
