@@ -16,6 +16,7 @@ import useInView from "react-cool-inview";
 
 import styles from "./Image.module.css";
 
+// ES dynamic import also works with SSR
 const Embed = dynamic(() => import("./Embed"));
 
 type ArticleProps = {
