@@ -7,8 +7,8 @@ import Image from "next/image";
 import Link from "next/link";
 
 /*  
-  Lazy loaded comments: Open dev tools in Chrome and inspect the network tab. You will see that 
-  the code chunk for the comments component will just be be loaded dynamically, 
+  Lazy loaded embed: Open dev tools in Chrome and inspect the network tab. You will see that 
+  the code chunk for the embed component will just be be loaded dynamically, 
   if you scroll down and it is getting into the viewport.
 */
 import dynamic from "next/dynamic";
@@ -16,7 +16,7 @@ import useInView from "react-cool-inview";
 
 import styles from "./Image.module.css";
 
-const Comments = dynamic(() => import("./Comments"));
+const Embed = dynamic(() => import("./Embed"));
 
 type ArticleProps = {
   item: ArticleType;
@@ -25,7 +25,7 @@ type ArticleProps = {
 function Article({ item: article }: ArticleProps) {
   /* 
   react-cool-inview uses the intersection observer technique 
-  so that you can tell the comments wrapper to observe an 'in view' event
+  so that you can tell the embed wrapper to observe an 'in view' event
   and load content on demand
 */
   const { observe, inView } = useInView({
@@ -102,10 +102,10 @@ function Article({ item: article }: ArticleProps) {
       <p>Scroll Down</p>
       <p>Scroll Down</p>
 
-      <div className="comments-wrapper" ref={observe}>
-        <h2>Comments</h2>
-        {/* comments go here*/}
-        {inView && <Comments />}
+      <div className="embed-wrapper" ref={observe}>
+        <h2>Embed</h2>
+        {/* embed goes here*/}
+        {inView && <Embed />}
       </div>
     </div>
   );
