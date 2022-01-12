@@ -3,6 +3,7 @@ import { ArticleType } from "../interfaces";
 export const dummyArticleData: ArticleType[] = [
   {
     id: 1,
+    home: false,
     title: "News",
     image:
       "https://images.unsplash.com/photo-1519861531473-9200262188bf?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2102&q=80",
@@ -10,6 +11,7 @@ export const dummyArticleData: ArticleType[] = [
   },
   {
     id: 2,
+    home: true,
     title: "Nachrichten",
     image:
       "https://images.unsplash.com/photo-1519861531473-9200262188bf?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2102&q=80",
@@ -17,6 +19,7 @@ export const dummyArticleData: ArticleType[] = [
   },
   {
     id: 3,
+    home: true,
     title: "Foo",
     image:
       "https://images.unsplash.com/photo-1519861531473-9200262188bf?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2102&q=80",
@@ -24,6 +27,7 @@ export const dummyArticleData: ArticleType[] = [
   },
   {
     id: 4,
+    home: false,
     title: "Bar",
     image:
       "https://images.unsplash.com/photo-1519861531473-9200262188bf?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2102&q=80",

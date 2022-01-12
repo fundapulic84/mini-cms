@@ -32,9 +32,16 @@ export default StaticPropsArticle;
 
 export const getStaticPaths: GetStaticPaths = async () => {
   /*
+    SELECT ARTICLES TO PRE-RENDER ON BUILD-TIME
     Get the paths we want to pre-render based on articles
    */
-  const paths = dummyArticleData.map((article) => ({
+  /*const paths = dummyArticleData.map((article) => ({
+    params: { id: article.id.toString() },
+  }));*/
+
+  const homeNews = dummyArticleData.filter((article) => article.home === true);
+
+  const paths = homeNews.map((article) => ({
     params: { id: article.id.toString() },
   }));
 
@@ -46,9 +53,12 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 /*
-    This function gets called at build time on server-side.
-    It won't be called on client-side, so you can even do
-    direct database queries.
+    ANALYZE THE REQUEST, GET THE RIGHT DATA AND PASS IT TO THE PAGE
+    - params contains the `id` of an article
+    - if the route is like /articles/1, then params.id is 1
+    - getStaticProps is called at build time on server-side.
+      It won't be called on client-side, so you can even do
+      direct database queries.
  */
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   try {

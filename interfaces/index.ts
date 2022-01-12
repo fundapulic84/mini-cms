@@ -1,5 +1,6 @@
 export type ArticleType = {
   id: number;
+  home: boolean;
   title: string;
   image: string;
   text: string;
