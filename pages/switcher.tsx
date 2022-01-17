@@ -1,16 +1,17 @@
 import { NextPage } from "next";
 
-interface Props {
+type Props = {
   userAgent?: string;
-}
+};
 
-const Page: NextPage<Props> = ({ userAgent }) => (
+const Switcher: NextPage<Props> = ({ userAgent }) => (
   <main>Your user agent: {userAgent}</main>
 );
 
-Page.getInitialProps = async ({ req }) => {
+// as Switcher is a NextPage it knows what type req is
+Switcher.getInitialProps = async ({ req }) => {
   const userAgent = req ? req.headers["user-agent"] : navigator.userAgent;
   return { userAgent };
 };
 
-export default Page;
+export default Switcher;
